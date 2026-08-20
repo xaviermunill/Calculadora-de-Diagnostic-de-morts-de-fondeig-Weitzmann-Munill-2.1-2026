@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F5F5F0;
+    color: #134E4A;
+  }
+
+  h1, h2, .font-serif {
+    font-family: 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom Natural Tones theme accents */
+.bg-natural-canvas {
+  background-color: #F5F5F0;
+}
+.bg-natural-surface {
+  background-color: #FAF9F6;
+}
+.bg-natural-panel {
+  background-color: #E9E9E0;
+}
+.border-natural-subtle {
+  border-color: #E5E5DF;
+}
+.border-natural-medium {
+  border-color: #D1D1C7;
+}
+.text-natural-primary {
+  color: #134E4A;
+}
+.text-natural-muted {
+  color: #64746B;
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header, footer, nav, button, .print\:hidden {
+    display: none !important;
+  }
+
+  /* Prevent awkward page break cuts */
+  tr, .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+}
