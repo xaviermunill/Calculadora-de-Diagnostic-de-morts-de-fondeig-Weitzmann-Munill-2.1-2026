@@ -1,6 +1,0 @@
-{
-  "name": "Calculadora Diagnosi de Morts de Fondeig",
-  "description": "Protocol de priorització per a la retirada o conservació de blocs de formigó (morts) en la restauració d'hàbitats marins.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
