@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F5F5F0;
+    color: #134E4A;
+  }
+
+  h1, h2, .font-serif {
+    font-family: 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Custom Natural Tones theme accents */
+.bg-natural-canvas {
+  background-color: #F5F5F0;
+}
+.bg-natural-surface {
+  background-color: #FAF9F6;
+}
+.bg-natural-panel {
+  background-color: #E9E9E0;
+}
+.border-natural-subtle {
+  border-color: #E5E5DF;
+}
+.border-natural-medium {
+  border-color: #D1D1C7;
+}
+.text-natural-primary {
+  color: #134E4A;
+}
+.text-natural-muted {
+  color: #64746B;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 6mm 8mm 6mm 8mm;
+  }
+
+  html, body {
+    background-color: white !important;
+    color: #134E4A !important;
+    font-size: 9.5pt;
+    line-height: 1.3;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  header, footer, nav, button, .print\:hidden {
+    display: none !important;
+  }
+
+  /* Exactly 1 A4 Page layout container */
+  .print-a4-page {
+    width: 100% !important;
+    max-width: 194mm !important;
+    height: 282mm !important;
+    max-height: 282mm !important;
+    margin: 0 auto !important;
+    padding: 2mm 0 !important;
+    box-sizing: border-box !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: white !important;
+  }
+
+  .print-a4-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  /* Prevent awkward page break cuts inside blocks */
+  tr, .print-avoid-break {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-page-break {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+}
+
